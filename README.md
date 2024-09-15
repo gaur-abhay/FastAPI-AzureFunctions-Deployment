@@ -11,6 +11,7 @@ This repository demonstrates how to deploy a FastAPI application to **Azure Func
 - [Testing the Deployment](#testing-the-deployment)
 - [What I Learned](#what-i-learned)
 - [Conclusion](#conclusion)
+- [References](#references)
 
 ## About
 

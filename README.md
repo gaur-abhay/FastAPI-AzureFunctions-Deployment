@@ -1,6 +1,6 @@
 # FastAPI Deployment to Azure Functions (Learning Project)
 
-This repository showcases how to deploy a FastAPI application to **Azure Functions**, demonstrating my learning of cloud deployment and serverless architecture. The FastAPI app is kept minimal for demonstration purposes.
+This repository demonstrates how to deploy a FastAPI application to **Azure Functions** using the v2 model with a `function_app.py` file. The goal of this project is to showcase the deployment process of a basic FastAPI app using Azure’s serverless computing capabilities.
 
 ## Table of Contents
 - [About](#about)
@@ -22,35 +22,21 @@ This is a learning project aimed at showcasing the deployment process of a FastA
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
-- [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local)
-- [Python 3.7+](https://www.python.org/downloads/)
-- FastAPI (`pip install fastapi uvicorn`)
+Before starting, ensure you have the following:
+- **Azure CLI**: [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
+- **Azure Functions Core Tools**: For running functions locally. [Install here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local).
+- **FastAPI & Uvicorn**: Install using:
+    ```bash
+    pip install fastapi uvicorn
+    ```
 
 ---
 
 ## FastAPI Application Setup
 
-To start, we create a minimal FastAPI app with one endpoint.
+Once the FastAPI application code is set up with a basic structure, you'll need to ensure that it can handle HTTP requests when deployed as an Azure Function. The setup includes a simple FastAPI app with one or two routes to demonstrate the deployment.
 
-```bash
-mkdir fastapi-azure-functions-sample
-cd fastapi-azure-functions-sample
-pip install fastapi uvicorn
-```
-
-In `main.py`, we’ll define a basic FastAPI application:
-
-```python
-from fastapi import FastAPI
-
-app = FastAPI()
-
-@app.get("/")
-def read_root():
-    return {"message": "Hello from FastAPI on Azure Functions!"}
-```
+We will use the v2 model of Azure Functions, which structures the project using a `function_app.py` file, eliminating the need for a `function.json` file.
 
 ---
 
@@ -105,35 +91,45 @@ Deploying the FastAPI app to Azure Functions involves the following steps:
 
 ## Testing the Deployment
 
-You can test the deployment by accessing the provided function URL:
+Once deployed, you can test your FastAPI app by accessing the provided function URL.
 
-```bash
-curl https://<YOUR_FUNCTION_NAME>.azurewebsites.net/api/FastAPIHttpTrigger
-```
+1. **Get the URL**:
+   The Azure CLI will output the URL for your function app after deployment. It will look something like:
+   ```
+   https://<YOUR_FUNCTION_APP_NAME>.azurewebsites.net/api/FastAPIHttpTrigger
+   ```
 
-Expected response:
-```json
-{
-  "message": "Hello from FastAPI deployed on Azure Functions!"
-}
-```
+2. **Test the API**:
+   Use `curl` or Postman to send a request to your FastAPI endpoint:
+   ```bash
+   curl https://<YOUR_FUNCTION_APP_NAME>.azurewebsites.net/api/FastAPIHttpTrigger
+   ```
+
+   You should see a JSON response similar to:
+   ```json
+   {
+       "message": "Hello from FastAPI deployed on Azure Functions!"
+   }
+   ```
+
+![Testing Deployment](<ADD_YOUR_IMAGE_URL_HERE>)
 
 ---
 
 ## What I Learned
 
-During this project, I learned how to:
-- Deploy a **FastAPI** app to **Azure Functions**.
-- Use **Azure CLI** for resource management and deployments.
-- Manage Azure Functions triggers for handling HTTP requests.
-- Configure serverless infrastructure and understand how it scales based on demand.
-
-This project was a great opportunity to apply my knowledge of serverless architecture while working on other FastAPI-related tasks at my company.
+While working on this project, I gained hands-on experience with:
+- **Deploying FastAPI apps** to **Azure Functions** using the serverless model.
+- Understanding how **WSGI middleware** works to integrate FastAPI with Azure Functions.
+- Using **Azure CLI** for managing resources, creating Function Apps, and deploying applications.
+- Configuring FastAPI to work in a **serverless environment** with automatic scaling based on demand.
 
 ---
 
 ## Conclusion
 
-This sample project demonstrates how to deploy a FastAPI application on Azure Functions. While it’s a minimal app, the process can be easily extended to more complex applications. Feel free to explore and contribute!
+This project serves as a demonstration of deploying a simple FastAPI application to Azure Functions using the v2 model. While this project focuses on the deployment process, it can be extended into a full-featured API in the future.
+
+Feel free to explore, contribute, or provide feedback on this repository!
 
 ---

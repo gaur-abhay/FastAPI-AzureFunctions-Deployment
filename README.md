@@ -133,3 +133,11 @@ This project serves as a demonstration of deploying a simple FastAPI application
 Feel free to explore, contribute, or provide feedback on this repository!
 
 ---
+
+## References
+
+This project was built based on the official Microsoft Azure documentation. You can learn more about deploying Python apps on Azure Functions from the following resources:
+- [Azure Functions Python Developer Guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)
+
+---
+

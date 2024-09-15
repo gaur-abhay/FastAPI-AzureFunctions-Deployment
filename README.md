@@ -45,22 +45,17 @@ We will use the v2 model of Azure Functions, which structures the project using 
 
 Next, we’ll initialize the Azure Function and set up the HTTP trigger to route requests to our FastAPI app.
 
-1. Install Azure Functions Core Tools if you haven't already:
+1. Initialize a new Azure Function in your project directory:
     ```bash
-    npm install -g azure-functions-core-tools@4 --unsafe-perm true
-    ```
-
-2. Initialize a new Azure Function in your project directory:
-    ```bash
-    func init --worker-runtime python --language python
+    func init --worker-runtime python
     ```
 
 3. Create an HTTP-triggered function:
     ```bash
-    func new --template "HTTP trigger" --name "FastAPIHttpTrigger"
+    func new --name HttpTrigger --template "HTTP trigger" --authlevel "anonymous"
     ```
 
-4. Modify `FastAPIHttpTrigger/__init__.py` to route requests to your FastAPI app (as shown earlier).
+4. Modify `function_app.py` to route requests to FastAPI app (as given in codebase).
 
 ---
 

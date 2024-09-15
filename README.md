@@ -2,7 +2,7 @@
 
 This repository demonstrates how to deploy a FastAPI application to **Azure Functions** using the v2 model with a `function_app.py` file. The goal of this project is to showcase the deployment process of a basic FastAPI app using Azure’s serverless computing capabilities.
 
-## 📋 Table of Contents
+## 📋Table of Contents
 - [About](#about)
 - [Prerequisites](#prerequisites)
 - [FastAPI Application Setup](#fastapi-application-setup)
@@ -13,7 +13,7 @@ This repository demonstrates how to deploy a FastAPI application to **Azure Func
 - [Conclusion](#conclusion)
 - [References](#references)
 
-## 🌟 About
+## 🌟About
 
 This is a learning project aimed at showcasing the deployment process of a FastAPI application to Azure Functions. I am working on FastAPI-related tasks at Mila AI, and this project helps me apply and demonstrate my knowledge of deploying cloud applications, focusing on the serverless approach using Azure.
 
@@ -21,7 +21,7 @@ This is a learning project aimed at showcasing the deployment process of a FastA
 
 ---
 
-## 🛠️ Prerequisites
+## 🛠Prerequisites
 
 Before starting, ensure you have the following:
 - **Azure CLI**: [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
@@ -64,7 +64,7 @@ Next, we’ll initialize the Azure Function and set up the HTTP trigger to route
 
 ---
 
-## 🚀 Deploying FastAPI to Azure Functions
+## 🚀Deploying FastAPI to Azure Functions
 
 Deploying the FastAPI app to Azure Functions involves the following steps:
 
@@ -117,7 +117,7 @@ Once deployed, you can test your FastAPI app by accessing the provided function 
 
 ---
 
-## 🧠 What I Learned
+## 🧠What I Learned
 
 While working on this project, I gained hands-on experience with:
 - **Deploying FastAPI apps** to **Azure Functions** using the serverless model.
@@ -127,7 +127,7 @@ While working on this project, I gained hands-on experience with:
 
 ---
 
-## 🎯 Conclusion
+## 🎯Conclusion
 
 This project serves as a demonstration of deploying a simple FastAPI application to Azure Functions using the v2 model. While this project focuses on the deployment process, it can be extended into a full-featured API in the future.
 
@@ -135,7 +135,7 @@ Feel free to explore, contribute, or provide feedback on this repository!
 
 ---
 
-## References
+## 🔗References
 
 This project was built based on the official Microsoft Azure documentation. You can learn more about deploying Python apps on Azure Functions from the following resources:
 - [Azure Functions Python Developer Guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python)

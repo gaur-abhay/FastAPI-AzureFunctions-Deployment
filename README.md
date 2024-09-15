@@ -1,4 +1,4 @@
-# FastAPI Deployment to Azure Functions (Learning Project)
+# <img src="https://github.com/user-attachments/assets/c707f0af-cb44-492e-8ba8-d23046dec6c9" alt="image" width="40" height="40"/> FastAPI Deployment to Azure Functions (Learning Project)
 
 This repository demonstrates how to deploy a FastAPI application to **Azure Functions** using the v2 model with a `function_app.py` file. The goal of this project is to showcase the deployment process of a basic FastAPI app using Azure’s serverless computing capabilities.
 

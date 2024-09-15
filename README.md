@@ -33,7 +33,7 @@ Before starting, ensure you have the following:
 
 ---
 
-## FastAPI Application Setup
+## <img src="https://github.com/user-attachments/assets/ff810adb-ad19-432d-94e4-281d0e27c0a9" alt="image" width="30" height="30"/> FastAPI Application Setup
 
 Once the FastAPI application code is set up with a basic structure, you'll need to ensure that it can handle HTTP requests when deployed as an Azure Function. The setup includes a simple FastAPI app with one or two routes to demonstrate the deployment.
 

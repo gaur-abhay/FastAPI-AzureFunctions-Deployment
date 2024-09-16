@@ -68,20 +68,17 @@ Deploying the FastAPI app to Azure Functions involves the following steps:
     az login
     ```
 
-2. **Create a resource group** (if needed):
-    ```bash
-    az group create --name fastapi-azure-function-rg --location westus
-    ```
+2. **Deploy the App**:
 
-3. **Create a Function App**:
-    ```bash
-    az functionapp create --resource-group fastapi-azure-function-rg --consumption-plan-location westus --runtime python --functions-version 4 --name <YOUR_FUNCTION_NAME> --storage-account <YOUR_STORAGE_ACCOUNT_NAME>
-    ```
+   - First, create a ZIP file of your function app:
+     ```bash
+     zip -r function.zip .
+     ```
 
-4. **Deploy the app**:
-    ```bash
-    func azure functionapp publish <YOUR_FUNCTION_NAME>
-    ```
+   - Then, deploy the ZIP file to your Azure Function App:
+     ```bash
+     az functionapp deployment source config-zip --name <YOUR_FUNCTION_APP_NAME> --resource-group <YOUR_RESOURCE_GROUP_NAME> --src function.zip
+     ```
 
 ---
 
@@ -90,15 +87,15 @@ Deploying the FastAPI app to Azure Functions involves the following steps:
 Once deployed, you can test your FastAPI app by accessing the provided function URL.
 
 1. **Get the URL**:
-   The Azure CLI will output the URL for your function app after deployment. It will look something like:
+   The Azure CLI will output the URL for function app after deployment. It will look something like:
    ```
-   https://<YOUR_FUNCTION_APP_NAME>.azurewebsites.net/api/FastAPIHttpTrigger
+   https://<YOUR_FUNCTION_APP_NAME>.azurewebsites.net/HttpTrigger
    ```
 
 2. **Test the API**:
    Use `curl` or Postman to send a request to your FastAPI endpoint:
    ```bash
-   curl https://<YOUR_FUNCTION_APP_NAME>.azurewebsites.net/api/FastAPIHttpTrigger
+   curl https://<YOUR_FUNCTION_APP_NAME>.azurewebsites.net/HttpTrigger
    ```
 
    You should see a JSON response similar to:

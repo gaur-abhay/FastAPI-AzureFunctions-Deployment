@@ -80,6 +80,9 @@ Deploying the FastAPI app to Azure Functions involves the following steps:
      az functionapp deployment source config-zip --name <YOUR_FUNCTION_APP_NAME> --resource-group <YOUR_RESOURCE_GROUP_NAME> --src function.zip
      ```
 
+![image](https://github.com/user-attachments/assets/1864296b-7a76-4a05-a5ba-8743bdd7505c)
+
+
 ---
 
 ## Testing the Deployment

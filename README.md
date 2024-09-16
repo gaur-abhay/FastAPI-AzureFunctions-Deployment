@@ -105,7 +105,8 @@ Once deployed, you can test your FastAPI app by accessing the provided function 
    }
    ```
 
-![Testing Deployment](<ADD_YOUR_IMAGE_URL_HERE>)
+![image](https://github.com/user-attachments/assets/0b4d52bb-a6e6-40a1-9873-9617e8b2a63b)
+
 
 ---
 

@@ -3,8 +3,8 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import JSONResponse
 from starlette.requests import Request
 
-from routes import user_routes
-from routes.user_routes import UserData
+from app.routes import user_routes
+from app.routes.user_routes import UserData
 
 app = FastAPI()
 
@@ -38,3 +38,6 @@ async def generic_exception_handler(request: Request, exc: Exception):
         content={"message": str(exc)},
     )
 
+@app.get("/")
+async def home():
+    return {"message": "From Main: Hello from FastAPI deployed on Azure Functions!"}

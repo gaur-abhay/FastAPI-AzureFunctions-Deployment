@@ -1,7 +1,7 @@
 import csv
 
 from fastapi import APIRouter, HTTPException
-from schemas.UserSchema import UserSchema
+from app.schemas.UserSchema import UserSchema
 
 api_router = APIRouter()
 

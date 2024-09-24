@@ -2,6 +2,9 @@
 
 This repository demonstrates how to deploy a FastAPI application to **Azure Functions** using the v2 model with a `function_app.py` file. The goal of this project is to showcase the deployment process of a basic FastAPI app using Azure’s serverless computing capabilities.
 
+## 🔗 GitHub Repository
+[GitHub Repository Link](https://github.com/gaur-abhay/FastAPI-AzureFunctions-Deployment) 
+
 ## 📋Table of Contents
 - [About](#about)
 - [Prerequisites](#prerequisites)
